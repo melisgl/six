@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Six
+Exec=six -- %f
+Icon=six
+Type=Application
+DocPath=six/six.html
+Comment=A Hex playing program
+Terminal=0
+MimeType=application/vnd.kde.six

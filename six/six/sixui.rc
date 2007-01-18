@@ -1,0 +1,59 @@
+<!DOCTYPE kpartgui SYSTEM "kpartgui.dtd">
+<kpartgui name="six" version="5">
+<MenuBar>
+  <Menu name="file">
+    <Action name="fileNewGame" />
+    <Separator />
+    <Action name="fileOpenGame" />
+    <Action name="fileSaveGame" />
+    <Action name="fileSaveGameAs" />
+    <Separator />
+    <Action name="fileImportPBEMGame" />
+    <Separator />
+    <Action name="filePrintPosition" />
+  </Menu>
+  <Menu name="game"><text>&amp;Game</text>
+    <Action name="gamePreviousMove" />
+    <Action name="gameNextMove" />
+    <Separator />
+    <Action name="gameFirstMove" />
+    <Action name="gameLastMove" />
+    <Separator />
+    <Action name="gameSuspend" />
+    <Action name="gameResume" />
+    <Separator />
+    <Action name="gameForceMove" />
+    <Action name="gameMove" />
+    <Action name="gameSwap" />
+    <Action name="gameResign" />
+  </Menu>
+  <Menu name="settings">
+    <Separator append="show_merge"/>
+    <Action name="swapAllowed" append="show_merge"/>
+    <Action name="boardSize" append="show_merge"/>
+    <Action name="blackPlayer" append="show_merge"/>
+    <Action name="whitePlayer" append="show_merge"/>
+    <Action name="resignAllowed" append="show_merge"/>
+    <Separator append="show_merge"/>
+    <Action name="moveNumbering" append="show_merge"/>
+    <Action name="showThinking" append="show_merge"/>
+    <Action name="swapStyle" append="show_merge"/>
+    <Action name="displayMode" append="show_merge"/>
+  </Menu>
+</MenuBar>
+
+<ToolBar name="mainToolBar">
+  <text>Main Toolbar</text>
+  <Action name="fileNewGame"/>
+  <Separator/>
+  <Action name="gamePreviousMove"/>
+  <Action name="gameNextMove"/>
+  <Separator />
+  <Action name="gameSuspend"/>
+  <Action name="gameResume"/>
+  <Separator/>
+  <Action name="gameSwap"/>
+  <Action name="gameResign" />
+ </ToolBar>
+
+</kpartgui>

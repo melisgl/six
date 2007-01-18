@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=MimeType
+MimeType=application/vnd.kde.six
+Icon=six
+Patterns=*.six;*.SIX;
+DefaultApp=six
+Comment=Six Game File

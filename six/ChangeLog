@@ -1,0 +1,333 @@
+2006-06-17  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.5.3
+
+	* added italian translation, thanks to Luciano Montanaro 
+
+	* updated admin from kde 3.5.3
+
+2004-08-04  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.5.2
+
+	* improved positional feel (resistance tuning) => noticeable
+	improvement especially on large boards and in openings
+
+2004-07-29  Gabor Melis  <mega@hotpop.com>
+
+	* do not think much when there is only one move
+
+2004-07-21  Gabor Melis  <mega@hotpop.com>
+
+	* use media player icons for history navigation
+
+2004-06-22  Gabor Melis  <mega@hotpop.com>
+
+	* fixed compilation error in unused template code that surfaced
+	under gcc 3.4
+
+	* reworked dead/useless move detection to hopefully fix those pesky
+	resignation bugs
+
+2004-03-29  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.5.1
+
+2004-03-27  Gabor Melis  <mega@hotpop.com>
+
+	* fixed bug that caused resignation in won position
+
+2004-03-03  Gabor Melis  <mega@hotpop.com>
+
+	* workaround for gcc 2.95 compiler error in circuit.h
+
+	* fixed compile error in group.cpp on 64 bit platforms
+
+	* applied FreeBSD compilation patches
+
+2004-02-29  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.5.0
+
+	* expert level demoted to advanced as a much stronger player takes
+	its place
+
+2004-01-06  Gabor Melis  <mega@hotpop.com>
+
+	* stop flashing when moving in history
+
+2004-01-03  Gabor Melis  <mega@hotpop.com>
+
+	* 2-10 times faster connection calculation
+
+	* useless moves are detected and discarded
+
+	* dead groups are detected and discarded
+
+	* implemented proper alpha-beta
+
+2004-01-02  Gabor Melis  <mega@hotpop.com>
+
+	* computer player can and does resign
+
+2004-01-01  Gabor Melis  <mega@hotpop.com>
+
+	* slightly changed colors
+
+2003-12-20  Gabor Melis  <mega@hotpop.com>
+
+	* clicking on the status bar works on the computer's turn with the
+	game paused
+
+	* less ugly app icon
+
+	* added mime type for six save games
+
+	* load save game given as a command line argument
+
+2003-12-02  Gabor Melis  <mega@hotpop.com>
+
+	* fixed spelling of my first name in the about dialog
+
+2003-12-01  Gabor Melis  <mega@hotpop.com>
+
+	* added resign button to gui
+
+	* added keyboard input for moves
+
+	* fixed statusbar layout problems with big icons
+
+	* board size and swap option can only be changed on a fresh game
+
+	* proper session mgmt: application state (including players,
+	board, clock, display settings) is saved and restored
+
+	* fixed status handling: clear changed and branched on import/load
+
+	* better questions in unsaved game situations
+
+2003-11-22  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.4.0 for the olympiad
+
+2003-11-19  Gabor Melis  <mega@hotpop.com>
+
+	* more opening moves for 11x11
+
+	* fine tuned swap table for 11x11
+
+2003-11-18  Gabor Melis  <mega@hotpop.com>
+
+	* intermediate and beginner levels were always weak, and they still
+	are with slightly different parameters
+
+	* advanced level is more or less what expert was except it's
+	better because of the resistance tuning
+
+	* expert level looks at more moves and is stronger
+
+2003-11-17  Gabor Melis  <mega@hotpop.com>
+
+	* board sizes up to 15
+
+	* alternative swap styles: swap board/players
+
+	* much better resistance values => improved playing strength
+
+2003-06-17  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.3.4
+
+	* fixed compilation problems
+
+2003-06-15  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.3.3
+
+	* made six detect games with branched move history and issue a warning
+
+	* fixed a crash in conductance calculation that surfaced when
+	isolated groups were present
+
+	* fixed load game bug: board size loaded correctly
+
+	* ported to g++ 3.3
+
+2002-09-23  Gabor Melis  <mega@hotpop.com>
+
+	* fixed a bug that caused connections to be lost (not processed)
+
+2002-09-18  Gabor Melis  <mega@hotpop.com>
+
+	* improved evaluation function by setting resistance values
+
+2002-09-15  Gabor Melis  <mega@hotpop.com>
+
+	* made six detect bad defensive moves sooner (winning semi connection
+          for the side to move)
+
+	* improved move selection by limiting moves to "critical path"
+
+2002-09-13  Gabor Melis  <mega@hotpop.com>
+
+	* fixed status bar move numbering of games with incomplete move history
+
+	* fixed saving of games with incomplete move history such as PBEM games
+
+2002-09-12  Gabor Melis  <mega@hotpop.com>
+
+	* iconsets for actions
+
+2002-09-11  Gabor Melis  <mega@hotpop.com>
+
+	* the colors of the board widget follow the KDE settings properly
+
+2002-09-10  Gabor Melis  <mega@hotpop.com>
+
+	* removed some icons
+
+	* fixed configure toolbar
+
+2002-09-09  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.3.1
+
+	* fixed compilation errors on RedHat7.2
+
+	* porbably fixed the negative values in clock bug
+
+2002-09-08  Gabor Melis  <mega@hotpop.com>
+
+	* added --black and --white command line options
+
+	* added --pbem-filter command line option
+
+	* implemented forfeit support
+
+2002-09-04  Gabor Melis  <mega@hotpop.com>
+
+	* edges for the losing side are colored different (good for resign)
+
+	* implemented resign support
+
+	* implemented import for Richard's PBEM games
+
+2002-09-01  Gabor Melis  <mega@hotpop.com>
+
+	* saveAs checks for existing files
+
+	* saveAs adds ".six" to filenames if necessary
+
+	* revived tests directory
+
+	* fixed bug that caused a crash when the black player was thinking
+          and its move was cancelled
+
+2002-08-30  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.3.0
+
+2002-08-28  Gabor Melis  <mega@hotpop.com>
+
+	* made it compile under kde3
+
+2002-08-26  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.2.8
+
+	* made winning path minimal
+
+2002-08-23  Gabor Melis  <mega@hotpop.com>
+
+	* fixed flashing of winning path for loaded games
+
+	* fixed move history numbers, now in sync with the number on the board
+
+	* marked swapped piece with 'S'
+
+	* fixed swapping at right and bottom edges
+
+2002-08-21  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.2.7
+
+2002-08-20  Gabor Melis  <mega@hotpop.com>
+
+	* implemented change tracking on games
+
+	* fixed diagonal display for boards with xs != ys
+
+	* fixed HexBoard::transvert bug that effects swap
+
+	* made NDEBUG macro control debug messages
+
+	* fixed advanced player params
+
+	* wrote help for save/load
+
+2002-08-19  Gabor Melis  <mega@hotpop.com>
+
+	* implemented save/load
+
+	* introduced HexGameState, refactored HexGame and HexMatch
+
+2002-08-15  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.2.6
+
+	* fixed formatting in mat.h
+
+	* changed resistances
+
+	* test for ordering in connector
+
+	* new ugly icons
+
+	* cleanup
+
+	* fixed includes
+
+2002-08-14  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.2.5
+	
+	* done a bit of refactoring in sixplayer
+
+	* fixed flashing of moves
+
+	* more kdoc 
+
+2002-08-12  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.2.4
+	
+	* fixed move counter on the stausbar
+
+	* removed dependency on it++
+
+2002-08-07  Gabor Melis  <mega@hotpop.com>
+
+	* released 0.2.3
+
+2002-08-06  Gabor Melis  <mega@hotpop.com>
+
+	* help done
+
+2002-08-04  Gabor Melis  <mega@hotpop.com>
+
+	* HexGame, HexMatch doc
+
+	* SixPlayer: late calc()
+
+	* Connector: initWithoutCalc, moveWithoutCalc
+
+	* remove empty batches from connector properly
+
+	* test for Group::set
+
+2002-08-02  Gabor Melis  <mega@hotpop.com>
+
+	* 0.2.0 released
+
+Sun Jul  7 19:41:52 CEST 2002 - Gabor Melis <mega@hotpop.com>
+    o Initial Creation

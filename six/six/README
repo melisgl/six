@@ -1,0 +1,67 @@
+Overview
+--------
+
+- General/utility files/classes:
+
+misc.h
+vec.h
+mat.h
+poi.h
+lssolve.h
+slicedtask.h
+
+- The game of Hex
+  
+hexmark.h
+hexfield.h
+hexboard.h
+hexmove.h
+hexgamestate.h
+hexgame.h
+hexmatch.h
+hexplayer.h
+
+- AI
+
+carrier.h
+group.h
+batch.h
+connector.h
+circuit.h
+sixplayer.h
+
+- GUI
+
+asyncplayer.h
+khexwidget.h
+ksix.h
+
+
+Explanation of statuses and semi-threading
+------------------------------------------
+
+While the computer is thinking the GUI should still function properly.
+To achieve this goal one can use threading, split the background task
+(in this case thinking) into small chunks or keep processing events by
+directly calling kapp->processEvents() every once in a while.
+
+Threading - which seems to be the cleanest solution - introduces more
+dependencies either on phtreads or qt-mt. To keep portability problems
+away phtreads were not used. QT-MT was not used because as of KDE2.2
+some distributions do not include these libraries by default and
+almost none of the KDE programs use it.
+
+Splitting the background task into small chunks (and keeping the state
+between two chunks!) is very hard to do in this particular case.
+
+So, with the two other choices out that leaves us with calling
+kapp->processEvents() periodically from the background task. While it
+may seem a simple solution it does introduce problems when a new
+HexMatch is to be created and the from current one
+kapp->processEvents() was called. If HexMatch is just deleted we are
+likely to end up with a SIGSEGV when control from processEvents()
+returns to the deleted HexMatch. Similar problems exists when the
+player that is thinking (and calling processEvents()) is
+changed/deleted.
+
+Working around these problems complicates class KSix quite a bit.

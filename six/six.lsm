@@ -1,0 +1,14 @@
+Begin4
+Title:          Six -- A Hex playing program for KDE
+Version:        0.5.2
+Entered-date:   06Aug02
+Description:    Hex playing program
+Keywords:       kde qt hex six
+Author:         Gabor Melis <mega@hotpop.com>
+Maintained-by:  Gabor Melis <mega@hotpop.com>
+Home-page:      http://six.retes.hu/
+Alternate-site: 
+Primary-site:   http://six.retes.hu/
+Platform:       Un*x. Needs KDE 2.x or 3.x
+Copying-policy: GPL
+End

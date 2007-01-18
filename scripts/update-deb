@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+cd `dirname $0`
+OLDVERSION=$1
+NEWVERSION=$2
+cd $OLDVERSION
+uupdate -u ../$NEWVERSION.tar.gz
+cd ../$NEWVERSION
+dpkg-buildpackage -rfakeroot

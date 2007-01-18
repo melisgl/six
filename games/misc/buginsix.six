@@ -1,0 +1,12 @@
+BoardSize: 5x5
+First: V
+Swap: 0
+Moves:
+  1. A4 (1 ms) A5 (1 ms)
+  2. B4 (516 ms) C3 (2530 ms)
+  3. B2 (282 ms) B5 (12178 ms)
+  4. D4 (111 ms) C5 (15363 ms)
+  5. D5 (23 ms) C4 (2439 ms)
+  6. E2 (9 ms) E1 (7034 ms)
+  7. D2 (5 ms) C2 (1951 ms)
+  8. D1 (4 ms) D3 (1681 ms)

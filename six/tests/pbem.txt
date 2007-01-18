@@ -1,0 +1,30 @@
+Summary of Hex Board 588
+
+It is morteux's turn.
+
+   Vert         Horz
+   ski          morteux
+   5 D8         6 D9
+   7 C10        8 C9
+   9 E8        10 E9
+  11 G8
+
+
+      A B C D E F G H I J K
+    1  . . . . . . . . . . .  1
+     2  . V . . . . . . . . .  2
+      3  . . . . . . . . . . .  3
+       4  . . . . . . . . . . .  4
+        5  . . . . . . . . . . .  5
+         6  . . . . . H . . . . .  6
+          7  . . V . . . . . . . .  7
+           8  . . . V V . V . . . .  8
+            9  . . H H H . . . . . .  9
+            10  . H V . . . . . . . .  10
+             11  . . . . . . . . . . .  11
+                  A B C D E F G H I J K
+
+
+Subscribers: dispbot
+
+

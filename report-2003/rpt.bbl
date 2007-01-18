@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{Ansh00b}
+Vadim Anshelevich.
+\newblock Hexy {W}ins {H}ex {T}ournament.
+\newblock {\em ICGA}, 23(3):181--184, 2000.
+
+\bibitem{Ansh02}
+Vadim Anshelevich.
+\newblock A {H}ierarchical {A}pproach to {C}omputer {H}ex.
+\newblock {\em Artificial Intelligence}, 134:101--120, 2002.
+\newblock (Also in: Schaeffer, J.; and Van den Herik, J. (Eds) 2002. Chips,
+  Computers and Artificial Intelligence, Elsevier, 141-160).
+
+\bibitem{HB03}
+Ryan~B. Hayward, Yngvi Bj{\"{o}}rnnson, Michael Johanson, Morgan Kan, Nathan
+  Po, and Jack van Rijswijck.
+\newblock Solving $7\times 7$ {H}ex: {V}irtual {C}onnections and {G}ame-state
+  {R}eduction.
+\newblock In H.~Jaap van~den Herik, Hiroyuki Iida, and Ernst~A. Heinz, editors,
+  {\em Advances in Computer Games}, volume 263 of {\em IFIP International
+  Federation for Information Processing}, pages 261--278. Kluwer Academic
+  Publishers, Boston, 2003.
+
+\end{thebibliography}

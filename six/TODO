@@ -1,0 +1,36 @@
+- precalculate opening positions
+- test random play evaluation
+- gradually relax limits
+- different limits for batches (based on color?)
+- dual circuit
+- if a winning connection is detected after the opponent moves, then ...
+  - investigate if this happens
+- fix slowdown when moving back and forth in history
+- zero window for alpha-beta/PVS
+- swapAllowed is overridden by game
+- dynamic width: until Rb and Rw are both dominated
+- Carrier::new/delete
+- Carrier size dynamic
+- randomize play
+- maxInOrRule should vary: 4-ALL
+- 3d graphics
+- show thinking with piece(s) of principal variation
+- discard dominated moves
+- fill board
+- design hex protocol
+- advanced clock handling
+- ponder (think on opponents turn)
+- integrate game tree search and H-search
+- hex variants: chameleon, Y
+
+Done:
+- do not think much when there is only one move
+- proper alpha-beta
+- detect dead groups
+- detect useless moves
+- discard useless moves
+- test transposition tables: doesn't help noticably with 20x20x20
+- test iterative deepening:
+  - memory hog
+  - does not improve move ordering
+- computer resign support

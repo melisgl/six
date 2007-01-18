@@ -1,0 +1,375 @@
+# translation of it.po to Italian
+# This file is put in the public domain.
+#
+# Luciano Montanaro <mikelima@cirulla.net>, 2005.
+# Luciano Montanaro <mikelima@cirulla.net>, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: it\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2005-10-25 15:11+0200\n"
+"PO-Revision-Date: 2005-10-25 17:17+0200\n"
+"Last-Translator: Luciano Montanaro <mikelima@cirulla.net>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: _translatorinfo.cpp:1
+msgid ""
+"_: NAME OF TRANSLATORS\n"
+"Your names"
+msgstr "Luciano Montanaro"
+
+#: _translatorinfo.cpp:3
+msgid ""
+"_: EMAIL OF TRANSLATORS\n"
+"Your emails"
+msgstr "mikelima@cirulla.net"
+
+#: khexwidget.cpp:243
+msgid "S"
+msgstr "S"
+
+#: ksix.cpp:63
+msgid "%1. Swap"
+msgstr "%1. Scambio"
+
+#: ksix.cpp:65
+msgid "%1. Resign"
+msgstr "%1. Abbandona"
+
+#: ksix.cpp:67
+msgid "%1. Forfeit"
+msgstr "%1. Rinuncia"
+
+#: ksix.cpp:74
+msgid "%1. %2%3"
+msgstr "%1. %2%3"
+
+#: ksix.cpp:199
+msgid "&Open Game"
+msgstr "&Apri partita"
+
+#: ksix.cpp:204
+msgid "&Save Game"
+msgstr "&Salva partita"
+
+#: ksix.cpp:209
+msgid "&Save Game As"
+msgstr "&Salva partita con nome"
+
+#: ksix.cpp:214
+msgid "&Import PBEM Game"
+msgstr "&Importa partita PBEM"
+
+#: ksix.cpp:219
+msgid "&Print Position"
+msgstr "Stam&pa posizione"
+
+#: ksix.cpp:228
+msgid "&Previous Move"
+msgstr "Mossa pre&cedente"
+
+#: ksix.cpp:234
+msgid "&Next Move"
+msgstr "Mossa successi&va"
+
+#: ksix.cpp:240
+msgid "&First Move"
+msgstr "&Prima mossa"
+
+#: ksix.cpp:246
+msgid "&Last Move"
+msgstr "U&ltima mossa"
+
+#: ksix.cpp:252
+msgid "&Pause"
+msgstr "&Pausa"
+
+#: ksix.cpp:257
+msgid "&Continue"
+msgstr "&Continua"
+
+#: ksix.cpp:262
+msgid "&Move"
+msgstr "&Muovi"
+
+#: ksix.cpp:267
+msgid "&Swap"
+msgstr "&Scambia"
+
+#: ksix.cpp:272
+msgid "&Resign"
+msgstr "&Abbandona"
+
+#: ksix.cpp:284
+msgid "Swa&p Allowed"
+msgstr "Scambio &permesso"
+
+#: ksix.cpp:290
+msgid "Board Si&ze"
+msgstr "&Dimensione tavoliere"
+
+#: ksix.cpp:292
+msgid "&4"
+msgstr "&4"
+
+#: ksix.cpp:293
+msgid "&5"
+msgstr "&5"
+
+#: ksix.cpp:294
+msgid "&6"
+msgstr "&6"
+
+#: ksix.cpp:295
+msgid "&7"
+msgstr "&7"
+
+#: ksix.cpp:296
+msgid "&8"
+msgstr "&8"
+
+#: ksix.cpp:297
+msgid "&9"
+msgstr "&9"
+
+#: ksix.cpp:298
+msgid "&10"
+msgstr "&10"
+
+#: ksix.cpp:299
+msgid "&11"
+msgstr "&11"
+
+#: ksix.cpp:301
+msgid "&12"
+msgstr "&12"
+
+#: ksix.cpp:302
+msgid "&13"
+msgstr "&13"
+
+#: ksix.cpp:303
+msgid "&14"
+msgstr "&14"
+
+#: ksix.cpp:304
+msgid "&15"
+msgstr "&15"
+
+#: ksix.cpp:313
+msgid "Resign Allowed"
+msgstr "L'abbandono è permesso"
+
+#: ksix.cpp:318
+msgid "Move &Numbering"
+msgstr "&Numerazione mosse"
+
+#: ksix.cpp:324
+msgid "Show Th&inking"
+msgstr "Mostra il &ragionamento"
+
+#: ksix.cpp:332
+msgid "Swap St&yle"
+msgstr "Stile di scambio"
+
+#: ksix.cpp:334
+msgid "&Board"
+msgstr "&Tavoliere"
+
+#: ksix.cpp:335
+msgid "&Players"
+msgstr "&Giocatori"
+
+#: ksix.cpp:345
+msgid "&Display Mode"
+msgstr "Modalità &di presentazione"
+
+#: ksix.cpp:347
+msgid "&Diagonal"
+msgstr "&Diagonale"
+
+#: ksix.cpp:348
+msgid "&Flat"
+msgstr "&Piatto"
+
+#: ksix.cpp:358 ksix.cpp:825
+msgid "&Black Player"
+msgstr "Giocatore &nero"
+
+#: ksix.cpp:360 ksix.cpp:376
+msgid "&Human"
+msgstr "&Umano"
+
+#: ksix.cpp:361 ksix.cpp:377
+msgid "&Beginner"
+msgstr "&Principiante"
+
+#: ksix.cpp:362 ksix.cpp:378
+msgid "&Intermediate"
+msgstr "&Intermedio"
+
+#: ksix.cpp:363 ksix.cpp:379
+msgid "&Advanced"
+msgstr "&Avanzato"
+
+#: ksix.cpp:364 ksix.cpp:380
+msgid "&Expert"
+msgstr "&Esperto"
+
+#: ksix.cpp:374 ksix.cpp:826
+msgid "&White Player"
+msgstr "Giocatore b&ianco"
+
+#: ksix.cpp:580
+msgid "Loading '%1' failed."
+msgstr "Il caricamento di \"%1\" non è riuscito."
+
+#: ksix.cpp:595
+msgid "Saving '%1' failed."
+msgstr "Il salvataggio di \"%1\" non è riuscito."
+
+#: ksix.cpp:616
+msgid "Importing '%1' failed."
+msgstr "L'importazione di \"%1\" non è riuscita."
+
+#: ksix.cpp:630
+msgid "This game has not been saved. Continue loading?"
+msgstr "Questo gioco non è stato salvato. Vuoi proseguire il caricamento?"
+
+#: ksix.cpp:632
+msgid "Open Game"
+msgstr "Apri Partita"
+
+#: ksix.cpp:646
+msgid ""
+"This game has been branched by moving backwards\n"
+"in move history and starting play from that position.\n"
+"Saving will overwrite the original game. Continue?"
+msgstr ""
+"Questa partita è la continuazione di una partita\n"
+"ripresa da una vecchia posizione\n"
+"nella cronologia delle mosse.\n"
+"Il salvataggio farà perdere la partita originale.\n"
+"Vuoi continuare lo stesso? "
+
+#: ksix.cpp:659
+msgid "Save Game"
+msgstr "Salva partita"
+
+#: ksix.cpp:668
+msgid "File '%1' exists. Overwrite?"
+msgstr "Il file \"%1\" esiste già. Vuoi sovrascriverlo?"
+
+#: ksix.cpp:680
+msgid "This game has not been saved. Continue importing?"
+msgstr "Questo gioco non è stato salvato. Vuoi continuare l'importazione lo stesso?"
+
+#: ksix.cpp:683
+msgid "Import PBEM Game"
+msgstr "Importazione partita PBEM"
+
+#: ksix.cpp:714
+msgid "This game has not been saved. Quit anyway?"
+msgstr "Questa partita non è stata salvata. Vuoi uscire lo stesso?"
+
+#: ksix.cpp:822
+msgid "&White Player (swapped)"
+msgstr "Giocatore b&ianco (scambiato)"
+
+#: ksix.cpp:823
+msgid "&Black Player (swapped)"
+msgstr "Giocatore &nero (scambiato)"
+
+#: ksix.cpp:863
+msgid "(**)"
+msgstr "(**)"
+
+#: ksix.cpp:865
+msgid "(*)"
+msgstr "(*)"
+
+#: ksix.cpp:876
+msgid "Black has won."
+msgstr "Il nero ha vinto."
+
+#: ksix.cpp:878
+msgid "White has won."
+msgstr "Il bianco ha vinto."
+
+#: ksix.cpp:882
+msgid "Black's turn."
+msgstr "Turno del nero."
+
+#: ksix.cpp:884
+msgid "White's turn."
+msgstr "Turno del bianco."
+
+#: ksix.cpp:908
+msgid "%1  %2"
+msgstr "%1  %2"
+
+#: ksix.cpp:912
+msgid "%1   %2"
+msgstr "%1   %2"
+
+#: ksix.cpp:982
+msgid "This game has not been saved. Start a new one?"
+msgstr "Questa partita non è stata salvata. Vuoi veramente iniziarne una nuova?"
+
+#: ksix.cpp:1084
+msgid "Enter move:"
+msgstr "Inserisci una mossa:"
+
+#: main.cpp:17
+msgid "Six is a Hex playing program."
+msgstr "Six è un programma per giocare ad Hex."
+
+#: main.cpp:23
+msgid ""
+"Set black player. Possible values are:\n"
+"\"human\", \"beginner\", \"intermediate\",\n"
+"\"advanced\", \"expert\"."
+msgstr ""
+"Scegli il tipo per il giocatore nero. I valori possibili sono:\n"
+"\"umano\", \"principiante\", \"intermedio\",\n"
+"\"avanzato\", \"esperto\"."
+
+#: main.cpp:26
+msgid ""
+"Set white player. Possible values are:\n"
+"\"human\", \"beginner\", \"intermediate\",\n"
+"\"advanced\", \"expert\"."
+msgstr ""
+"Scegli il tipo per il giocatore bianco. I valori possibili sono:\n"
+"\"umano\", \"principiante\", \"intermedio\",\n"
+"\"avanzato\", \"esperto\"."
+
+#: main.cpp:29
+msgid "Import PBEM game from standard input."
+msgstr "Importa una partita PBEM da input standard."
+
+#: main.cpp:30
+msgid "Start with the game loaded from FILE."
+msgstr "Avvia con una partita caricata da FILE."
+
+#: main.cpp:38
+msgid "Six"
+msgstr "Six"
+
+#: main.cpp:58
+msgid "standard input"
+msgstr "input standard"
+
+#: main.cpp:63
+msgid "Invalid value for black player: %1"
+msgstr "Valore non valido per il giocatore nero: %1"
+
+#: main.cpp:72
+msgid "Invalid value for white player: %1"
+msgstr "Valore non valido per il giocatore bianco: %1"
+

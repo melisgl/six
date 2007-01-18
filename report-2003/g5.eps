@@ -1,0 +1,574 @@
+%!PS-Adobe-3.0
+%%Creator: Cameron Browne
+%%Title: ag-4-9
+%%CreationDate: 3/1/99
+%%BoundingBox: 0 0 600 347
+%%Pages: 1
+%%EndComments
+
+%---------------- Constants -------------------
+
+/Root3 1.732050808 def
+
+/Chars 
+{
+	[(A)(B)(C)(D)(E)(F)(G)(H)(I)(J)(K)(L)(M)(N)(O)(P)(Q)(R)(S)(T)(U)(V)(W)(X)(Y)(Z)]
+} def
+
+/Digits
+{
+	[( 0)( 1)( 2)( 3)( 4)( 5)( 6)( 7)( 8)( 9)(10)(11)(12)(13)(14)(15)(16)(17)(18)(19)(20)(21)(22)(23)(24)(25)(26)(27)(28)(29)(30)(31)(32)(33)(34)(35)(36)(37)(38)(39)(40)(41)(42)(43)(44)(45)(46)(47)(48)(49)(50)]
+} def
+
+%--------------- Variables ------------------
+
+/DimX 11 def
+/DimY 11 def
+
+/PageWidth 600 def
+/PageHeight 347 def
+
+/MidX 300 def
+/MidY 173 def
+
+/OriginX 34 def
+/OriginY 173 def
+
+/HexRadius 17.391 def
+/HexDiameter 34.783 def
+
+/CircleRadius 11.739 def
+/CircleDiameter 23.478 def
+
+/GoalRadius 11.739 def
+
+/CircleLineWidth 0.994 def
+/HexLineWidth 0.252 def
+/RhombusEdgeWidth 0.994 def
+/TextHeight 15.652 def
+/TextWidth 7.043 def
+/SubTextHeight 7.435 def
+/AxisTextHeight 11.739 def
+
+
+% ----------- Functions -------------
+
+/HexX
+{   % call: i j HexX
+    /j exch def
+    /i exch def
+    OriginX i j add HexRadius mul 1.5 mul add
+} def
+
+/HexY
+{   % call: i j HexY
+    /j exch def
+    /i exch def
+    OriginY j i sub HexRadius mul Root3 mul 2 div sub
+} def
+
+/White
+{   % call: i j White
+    /j exch def
+    /i exch def
+
+    % Fill shape
+    0 setlinewidth
+    1 setgray
+    newpath
+    i j HexX i j HexY CircleRadius 0 360 arc
+    fill
+
+    % Draw outline
+    0 setgray
+    CircleLineWidth setlinewidth
+    newpath
+    i j HexX i j HexY CircleRadius 0 360 arc
+    stroke
+} def
+
+/Black
+{   % call: i j Black
+    /j exch def
+    /i exch def
+
+    % Fill shape
+    CircleLineWidth setlinewidth
+    0 setgray
+    newpath
+    i j HexX i j HexY CircleRadius 0 360 arc
+    fill
+} def
+
+/Hexagon
+{   % call: i j Hexagon
+    /j exch def
+    /i exch def
+
+    % move to tile's top left vertex
+    newpath
+    i j HexX HexRadius 2 div sub
+    i j HexY HexRadius Root3 mul 2 div add
+    moveto
+
+    % draw tile outline
+    HexRadius 			0 rlineto
+    HexRadius 2 div 		HexRadius Root3 mul 2 div neg rlineto
+    HexRadius 2 div neg	HexRadius Root3 mul 2 div neg rlineto
+    HexRadius neg 		0 rlineto
+    HexRadius 2 div neg	HexRadius Root3 mul 2 div rlineto
+    closepath
+    HexLineWidth setlinewidth
+    0 setgray
+    stroke
+} def
+
+/FillHexagon
+{   % call: i j shade FillHexagon
+    /shade exch def
+    /j exch def
+    /i exch def
+
+    % move to tile's top left vertex
+    newpath
+    i j HexX HexRadius 2 div sub
+    i j HexY HexRadius Root3 mul 2 div add
+    moveto
+
+    % fill tile centre
+    HexRadius 			0 rlineto
+    HexRadius 2 div 		HexRadius Root3 mul 2 div neg rlineto
+    HexRadius 2 div neg	HexRadius Root3 mul 2 div neg rlineto
+    HexRadius neg 		0 rlineto
+    HexRadius 2 div neg	HexRadius Root3 mul 2 div rlineto
+    closepath
+    0 setlinewidth
+    shade setgray
+    fill
+
+    i j Hexagon
+} def
+
+/DrawGoals
+{
+    /Top { DimX 2 sub 0 HexY } def
+    /Left { 2 2 HexX } def
+    /Bottom { 0 DimY 2 sub HexY } def
+    /Right { DimX 3 sub DimY 3 sub HexX } def
+
+    CircleLineWidth setlinewidth
+    0 setgray
+
+    newpath Left Top GoalRadius 0 360 arc fill
+    newpath Left Bottom GoalRadius 0 360 arc stroke
+    newpath Right Top GoalRadius 0 360 arc stroke
+    newpath Right Bottom GoalRadius 0 360 arc fill
+} def
+
+/LabelAxes
+{
+    /Times-Roman findfont AxisTextHeight scalefont setfont
+    0 setgray
+
+    % draw horizontal axis labels along left side
+    0 1 DimX 1 sub
+    {
+        /i exch def
+        newpath
+        i -1 HexX HexDiameter 0.15 mul add
+        i -1 HexY HexDiameter 0.05 mul sub
+        moveto  % Lower left corner of text
+        Chars i get
+        show
+    } for
+
+    % draw vertical axis labels along top
+    0 1 DimY 1 sub
+    {
+        /j exch def
+        newpath
+        -1 j HexX HexDiameter 0.075 mul add
+        -1 j HexY HexDiameter 0.1 mul sub
+        moveto  % Lower left corner of text
+        Digits j 1 add get
+        show
+    } for
+} def
+
+/LabelNumber
+{   % call: i j (str) strlen shade LabelNumber
+    /shade exch def
+    /strlen exch def
+    /str exch def
+    /j exch def
+    /i exch def
+
+    /Times-BoldItalic findfont TextHeight scalefont setfont
+    newpath
+    i j HexX TextWidth strlen mul 0.5 mul sub TextWidth 0.1 mul sub
+    i j HexY TextHeight 0.31 mul sub
+    moveto
+    str
+    shade setgray
+    show
+} def
+
+/LabelString
+{   % call: i j (str) strlen shade bold LabelString
+    /bold exch def
+    /shade exch def
+    /strlen exch def
+    /str exch def
+    /j exch def
+    /i exch def
+
+    bold
+    {/Times-BoldItalic findfont TextHeight scalefont setfont}
+    {/Times-Italic findfont TextHeight scalefont setfont}
+    ifelse
+
+    newpath
+    i j HexX TextWidth strlen mul 0.5 mul sub
+    i j HexY TextHeight 0.225 mul sub
+    moveto
+    str
+    shade setgray
+    show
+} def
+
+/LabelSub
+{   % call: i j (str) substr shade bold LabelSub
+    /bold exch def
+    /shade exch def
+    /substr exch def
+    /str exch def
+    /j exch def
+    /i exch def
+
+    % load font and draw character
+    bold
+    {/Times-BoldItalic findfont TextHeight scalefont setfont}
+    {/Times-Italic findfont TextHeight scalefont setfont}
+    ifelse
+
+    shade setgray
+    newpath
+    i j HexX TextWidth 0.6 mul sub
+    i j HexY TextHeight 0.225 mul sub
+    moveto
+    str
+    show
+
+    % load font and draw character
+    bold
+    {/Times-BoldItalic findfont SubTextHeight scalefont setfont}
+    {/Times-Italic findfont SubTextHeight scalefont setfont}
+    ifelse
+
+    newpath
+    i j HexX TextWidth 0.45 mul add
+    i j HexY TextHeight 0.325 mul sub
+    moveto
+    substr
+    show
+} def
+
+/DrawRhombus
+{
+    % draw the grid
+    0 1 DimY 1 sub
+    {
+        /j exch def
+        0 1 DimX 1 sub
+        {
+            /i exch def
+            i j Hexagon
+        } for
+    } for
+
+    % draw horizontal edges
+    0 1 DimX 1 sub
+    {
+        /i exch def
+        i 0 RhombusEdge
+        i DimY 1 sub RhombusEdge
+    } for
+
+    % draw vertical edges
+    0 1 DimY 1 sub
+    {
+        /j exch def
+        0 j RhombusEdge
+        DimX 1 sub j RhombusEdge
+    } for
+
+    LabelAxes
+    DrawGoals
+} def
+
+/RhombusEdge
+{
+    % function call: i j RhombusEdge
+    /j exch def
+    /i exch def
+
+    newpath
+    RhombusEdgeWidth setlinewidth
+    0 setgray
+
+    i 0 eq
+    {
+        % start at tile's left vertex, go ccw
+    	   i j HexX HexRadius sub 	i j HexY moveto
+    	   HexRadius 2 div 		HexRadius Root3 mul 2 div neg rlineto
+    	   HexRadius  			0 rlineto
+    	   stroke
+    } if
+
+    j 0 eq
+    {
+    	   % start at tile's left vertex, go cw
+    	   i j HexX HexRadius sub 	i j HexY moveto
+    	   HexRadius 2 div 		HexRadius Root3 mul 2 div rlineto
+    	   HexRadius  			0 rlineto
+    	   stroke
+    } if
+
+    i DimX 1 sub eq
+    {
+    	   % start at tile's right vertex, go ccw
+    	   i j HexX HexRadius add 	i j HexY moveto
+    	   HexRadius 2 div neg	HexRadius Root3 mul 2 div rlineto
+    	   HexRadius neg		0 rlineto
+    	   stroke
+    } if
+
+    j DimY 1 sub eq
+    {
+    	   % start at tile's right vertex, go cw
+    	   i j HexX HexRadius add 	i j HexY moveto
+    	   HexRadius 2 div neg	HexRadius Root3 mul 2 div neg rlineto
+    	   HexRadius neg		0 rlineto
+    	   stroke
+    } if
+} def
+
+%-------------- Program --------------
+
+newpath
+
+0 0 0.800 FillHexagon
+1 0 0.800 FillHexagon
+2 0 0.800 FillHexagon
+3 0 0.800 FillHexagon
+4 0 0.800 FillHexagon
+5 0 0.800 FillHexagon
+6 0 0.800 FillHexagon
+7 0 0.800 FillHexagon
+8 0 0.800 FillHexagon
+9 0 0.800 FillHexagon
+10 0 0.800 FillHexagon
+0 1 0.800 FillHexagon
+1 1 0.800 FillHexagon
+2 1 0.800 FillHexagon
+3 1 0.800 FillHexagon
+4 1 0.800 FillHexagon
+5 1 0.800 FillHexagon
+6 1 0.800 FillHexagon
+7 1 0.800 FillHexagon
+8 1 0.800 FillHexagon
+9 1 0.800 FillHexagon
+10 1 0.800 FillHexagon
+0 2 0.800 FillHexagon
+1 2 0.800 FillHexagon
+2 2 0.800 FillHexagon
+3 2 0.800 FillHexagon
+4 2 0.800 FillHexagon
+5 2 0.800 FillHexagon
+6 2 0.800 FillHexagon
+7 2 0.800 FillHexagon
+8 2 0.800 FillHexagon
+9 2 0.800 FillHexagon
+10 2 0.800 FillHexagon
+0 3 0.800 FillHexagon
+1 3 0.800 FillHexagon
+2 3 0.800 FillHexagon
+3 3 0.800 FillHexagon
+4 3 0.800 FillHexagon
+5 3 0.800 FillHexagon
+6 3 0.800 FillHexagon
+7 3 0.800 FillHexagon
+8 3 0.800 FillHexagon
+9 3 0.800 FillHexagon
+10 3 0.800 FillHexagon
+0 4 0.800 FillHexagon
+1 4 0.800 FillHexagon
+2 4 0.800 FillHexagon
+3 4 0.800 FillHexagon
+4 4 0.800 FillHexagon
+5 4 0.800 FillHexagon
+6 4 0.800 FillHexagon
+7 4 0.800 FillHexagon
+8 4 0.800 FillHexagon
+9 4 0.800 FillHexagon
+10 4 0.800 FillHexagon
+0 5 0.800 FillHexagon
+1 5 0.800 FillHexagon
+2 5 0.800 FillHexagon
+3 5 0.800 FillHexagon
+4 5 0.800 FillHexagon
+5 5 0.800 FillHexagon
+6 5 0.800 FillHexagon
+7 5 0.800 FillHexagon
+8 5 0.800 FillHexagon
+9 5 0.800 FillHexagon
+10 5 0.800 FillHexagon
+0 6 0.800 FillHexagon
+1 6 0.800 FillHexagon
+2 6 0.800 FillHexagon
+3 6 0.800 FillHexagon
+4 6 0.800 FillHexagon
+5 6 0.800 FillHexagon
+6 6 0.800 FillHexagon
+7 6 0.800 FillHexagon
+8 6 0.800 FillHexagon
+9 6 0.800 FillHexagon
+10 6 0.800 FillHexagon
+0 7 0.800 FillHexagon
+1 7 0.800 FillHexagon
+2 7 0.800 FillHexagon
+3 7 0.800 FillHexagon
+4 7 0.800 FillHexagon
+5 7 0.800 FillHexagon
+6 7 0.800 FillHexagon
+7 7 0.800 FillHexagon
+8 7 0.800 FillHexagon
+9 7 0.800 FillHexagon
+10 7 0.800 FillHexagon
+0 8 0.800 FillHexagon
+1 8 0.800 FillHexagon
+2 8 0.800 FillHexagon
+3 8 0.800 FillHexagon
+4 8 0.800 FillHexagon
+5 8 0.800 FillHexagon
+6 8 0.800 FillHexagon
+7 8 0.800 FillHexagon
+8 8 0.800 FillHexagon
+9 8 0.800 FillHexagon
+10 8 0.800 FillHexagon
+0 9 0.800 FillHexagon
+1 9 0.800 FillHexagon
+2 9 0.800 FillHexagon
+3 9 0.800 FillHexagon
+4 9 0.800 FillHexagon
+5 9 0.800 FillHexagon
+6 9 0.800 FillHexagon
+7 9 0.800 FillHexagon
+8 9 0.800 FillHexagon
+9 9 0.800 FillHexagon
+10 9 0.800 FillHexagon
+0 10 0.800 FillHexagon
+1 10 0.800 FillHexagon
+2 10 0.800 FillHexagon
+3 10 0.800 FillHexagon
+4 10 0.800 FillHexagon
+5 10 0.800 FillHexagon
+6 10 0.800 FillHexagon
+7 10 0.800 FillHexagon
+8 10 0.800 FillHexagon
+9 10 0.800 FillHexagon
+10 10 0.800 FillHexagon
+
+
+0 1 Black 
+0 1 (1) 1 1 LabelNumber
+5 5 White 
+5 5 (2) 1 0 LabelNumber
+2 6 Black 
+2 6 (3) 1 1 LabelNumber
+2 7 White 
+2 7 (4) 1 0 LabelNumber
+6 5 Black 
+6 5 (5) 1 1 LabelNumber
+5 7 White 
+5 7 (6) 1 0 LabelNumber
+4 7 Black 
+4 7 (7) 1 1 LabelNumber
+3 6 White 
+3 6 (8) 1 0 LabelNumber
+1 8 Black 
+1 8 (9) 1 1 LabelNumber
+2 8 White 
+2 8 (10) 2 0 LabelNumber
+8 4 Black 
+8 4 (11) 2 1 LabelNumber
+8 2 White 
+8 2 (12) 2 0 LabelNumber
+10 1 Black 
+10 1 (13) 2 1 LabelNumber
+9 3 White 
+9 3 (14) 2 0 LabelNumber
+8 3 Black 
+8 3 (15) 2 1 LabelNumber
+7 6 White 
+7 6 (16) 2 0 LabelNumber
+5 6 Black 
+5 6 (17) 2 1 LabelNumber
+6 3 White 
+6 3 (18) 2 0 LabelNumber
+5 4 Black 
+5 4 (19) 2 1 LabelNumber
+3 9 White 
+3 9 (20) 2 0 LabelNumber
+4 8 Black 
+4 8 (21) 2 1 LabelNumber
+4 9 White 
+4 9 (22) 2 0 LabelNumber
+2 9 Black 
+2 9 (23) 2 1 LabelNumber
+3 8 White 
+3 8 (24) 2 0 LabelNumber
+1 9 Black 
+1 9 (25) 2 1 LabelNumber
+1 7 White 
+1 7 (26) 2 0 LabelNumber
+5 8 Black 
+5 8 (27) 2 1 LabelNumber
+9 2 White 
+9 2 (28) 2 0 LabelNumber
+7 2 Black 
+7 2 (29) 2 1 LabelNumber
+7 3 White 
+7 3 (30) 2 0 LabelNumber
+6 4 Black 
+6 4 (31) 2 1 LabelNumber
+5 3 White 
+5 3 (32) 2 0 LabelNumber
+4 4 Black 
+4 4 (33) 2 1 LabelNumber
+4 3 White 
+4 3 (34) 2 0 LabelNumber
+3 4 Black 
+3 4 (35) 2 1 LabelNumber
+3 3 White 
+3 3 (36) 2 0 LabelNumber
+10 2 Black 
+10 2 (37) 2 1 LabelNumber
+10 3 White 
+10 3 (38) 2 0 LabelNumber
+1 4 Black 
+1 4 (39) 2 1 LabelNumber
+2 4 White 
+2 4 (40) 2 0 LabelNumber
+0 5 Black 
+0 5 (41) 2 1 LabelNumber
+1 5 White 
+1 5 (42) 2 0 LabelNumber
+0 7 Black 
+0 7 (43) 2 1 LabelNumber
+0 6 White 
+0 6 (44) 2 0 LabelNumber
+%------------ Trailer --------------
+
+DrawRhombus
+showpage

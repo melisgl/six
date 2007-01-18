@@ -1,0 +1,18 @@
+InitialBoard: 
+  A B C D E F G H I J K 
+ 1 . . H . . . . . . . . 1
+  2 V . . . . . . . . . . 2
+   3 . . . . . H . . V H . 3
+    4 . . . . . . V H H . . 4
+     5 . . . . . . H . V . . 5
+      6 . . . . V . . V . . . 6
+       7 . . . . . V . . V . . 7
+        8 . . . . V H H H V V . 8
+         9 . . . H H V V H V H . 9
+         10 . H . . . . . . . . . 10
+          11 . . . . . . . . . . . 11
+              A B C D E F G H I J K 
+
+First: V
+Swap: 1
+Moves:

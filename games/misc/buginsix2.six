@@ -1,0 +1,11 @@
+BoardSize: 4x4
+First: V
+Swap: 0
+Moves:
+  1. D2 (0 ms) B3 (22 ms)
+  2. A3 (0 ms) C2 (14 ms)
+  3. A4 (5269 ms) B1 (10 ms)
+  4. A2 (1948 ms) A1 (0 ms)
+  5. C1 (17430 ms) B2 (7366 ms)
+  6. D1 (3 ms) C4 (2151 ms)
+  7. C3 (0 ms)

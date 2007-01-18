@@ -1,0 +1,1 @@
+./configure CXXFLAGS='-O -Wall -pg' CPPFLAGS=-I/home/mega/it++3.6.6/include/ LDFLAGS=-L/home/mega/it++3.6.6/lib/

@@ -1,0 +1,1 @@
+./configure CXXFLAGS='-g -O -Wall' KDEDIR=$HOME/k3dir

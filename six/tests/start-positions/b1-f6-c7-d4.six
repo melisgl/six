@@ -1,0 +1,6 @@
+BoardSize: 11x11
+First: V
+Swap: 1
+Moves:
+  1. B1 (0 ms) F6 (0 ms)
+  2. C7 (0 ms) D4 (0 ms)
