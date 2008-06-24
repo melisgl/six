@@ -11,6 +11,7 @@
 #include <klocale.h>
 #include <kmessagebox.h>
 #include <qfile.h>
+#include <cstdlib>
 
 using std::cin;
 
